@@ -1,4 +1,4 @@
-package komi.republic.marshakovka
+package library.client
 
 import android.os.Bundle
 import android.view.LayoutInflater

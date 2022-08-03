@@ -1,4 +1,4 @@
-package komi.republic.marshakovka
+package komi.republic.client
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

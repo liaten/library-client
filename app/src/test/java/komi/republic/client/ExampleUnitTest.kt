@@ -1,4 +1,4 @@
-package komi.republic.marshakovka
+package komi.republic.client
 
 import org.junit.Test
 
