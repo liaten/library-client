@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
+
+    <!-- main colors -->
+    <color name="cg_blue">#247BA0</color>
+    <color name="green_sheen">#70C1B3</color>
+    <color name="turquoise_green">#B2DBBF</color>
+    <color name="cream">#F3FFBD</color>
+    <color name="radical_red">#FF1654</color>
+
+    <!-- icon colors -->
+    <color name="rocket_metallic">#81726A</color>
+
+</resources>
