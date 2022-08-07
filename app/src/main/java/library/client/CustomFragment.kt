@@ -1,6 +1,7 @@
 package library.client
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -8,12 +9,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-open class CustomFragment():Fragment(){
+open class CustomFragment() : Fragment() {
 
-    private var menuItem:MenuItem? = null
+    private var menuItem: MenuItem? = null
     private val TAG = "CustomFragment"
 
-    constructor(item:MenuItem):this(){
+    constructor(item: MenuItem) : this() {
         this.menuItem = item
     }
 
@@ -27,12 +28,13 @@ open class CustomFragment():Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val textView = requireView().findViewById(R.id.text_view) as TextView
+        Log.d(TAG, "menuItem: $menuItem" )
         textView.text = menuItem.toString()
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(item: MenuItem):CustomFragment {
+        fun newInstance(item: MenuItem): CustomFragment {
             return CustomFragment(item)
         }
     }

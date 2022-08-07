@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mercury"
+    android:gravity="top">
+
+    <FrameLayout
+        android:id="@+id/top_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white"
+        android:paddingVertical="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/user_profile"
+            android:textColor="@color/woodsmoke"
+            android:textSize="30sp"
+            android:fontFamily="@font/pt_serif_bold"
+            android:gravity="bottom"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="@drawable/empty_divider"
+            android:paddingVertical="15dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/full_name_profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:background="@color/white"
+                android:paddingVertical="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/full_name_profile_textview"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pt_serif_regular"
+                    android:text="@string/guest"
+                    android:textColor="@color/woodsmoke"
+                    android:textSize="30sp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/books_on_hands_layout_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:divider="@drawable/empty_divider"
+                android:visibility="visible"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:id="@+id/books_on_hands_layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/books_on_hands_header"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pt_serif_bold"
+                        android:gravity="bottom"
+                        android:text="@string/books_on_hands"
+                        android:textColor="@color/woodsmoke"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/books_on_hands_view_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="15sp"
+                        android:text="@string/watch_all"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/jumbo" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_on_hands"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/books_on_hands_recycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:scrollbars="none"
+                        android:visibility="gone"
+                        android:clipToPadding="false"
+                        android:paddingStart="20dp"
+                        android:paddingBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+                    <ProgressBar
+                        android:id="@+id/books_on_hands_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                    <TextView
+                        android:id="@+id/books_on_hands_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/no_on_hands"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/jumbo"
+                        android:visibility="gone"
+                        android:paddingBottom="10dp"
+                        android:paddingHorizontal="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </LinearLayout> <!--книги на руках-->
+
+            <LinearLayout
+                android:id="@+id/reserved_books_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:divider="@drawable/empty_divider"
+                android:background="@color/white"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/reserved_books_layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/reserved_header"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reserved"
+                        android:textColor="@color/woodsmoke"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/pt_serif_bold"
+                        android:gravity="bottom"
+                        />
+                    <TextView
+                        android:id="@+id/reserved_books_view_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="15sp"
+                        android:text="@string/watch_all"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/jumbo"
+                        />
+
+                </LinearLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/booked_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reserved_books_recycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:scrollbars="none"
+                        android:visibility="gone"
+                        android:clipToPadding="false"
+                        android:paddingStart="20dp"
+                        android:paddingBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+                    <ProgressBar
+                        android:id="@+id/reserved_books_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                    <TextView
+                        android:id="@+id/reserved_books_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_booked"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/jumbo"
+                        android:fontFamily="@font/roboto"
+                        android:visibility="gone"
+                        android:paddingBottom="10dp"
+                        android:paddingHorizontal="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout> <!--забронированные-->
+
+            <LinearLayout
+                android:id="@+id/main_wishlist_header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                android:divider="@drawable/empty_divider"
+                android:visibility="visible"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:id="@+id/wishlist_header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/wishlist_header"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wishlist"
+                        android:textColor="@color/woodsmoke"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/pt_serif_bold"
+                        android:gravity="bottom"
+                        />
+                    <TextView
+                        android:id="@+id/wishlist_view_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="15sp"
+                        android:text="@string/watch_all"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/jumbo"
+                        />
+                </LinearLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/wishlist_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/wishlist_recycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:scrollbars="none"
+                        android:visibility="gone"
+                        android:clipToPadding="false"
+                        android:paddingStart="20dp"
+                        android:paddingBottom="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+                    <ProgressBar
+                        android:id="@+id/wishlist_loading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:indeterminate="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                    <TextView
+                        android:id="@+id/wishlist_alert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_wishlist_books"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/jumbo"
+                        android:fontFamily="@font/roboto"
+                        android:visibility="gone"
+                        android:paddingBottom="10dp"
+                        android:paddingHorizontal="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout> <!--список желаемого-->
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>

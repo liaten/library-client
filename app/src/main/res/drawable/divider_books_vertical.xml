@@ -8,6 +8,6 @@
         android:width="0dp"
         />
     <solid
-        android:color="@color/black"
+        android:color="@color/mercury"
         />
 </shape>

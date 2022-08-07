@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mercury"
+    android:gravity="top"
+    android:showDividers="middle"
+    android:divider="@drawable/empty_divider"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/pt_serif_bold"
+            android:gravity="bottom"
+            android:text="@string/authorization"
+            android:textColor="@color/woodsmoke"
+            android:textSize="30sp"
+            android:paddingVertical="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/authorized_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white"
+        android:paddingVertical="10dp"
+        >
+
+        <TextView
+            android:id="@+id/authorized_text_view"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pt_serif_regular"
+            android:text="@string/authorized"
+            android:textColor="@color/woodsmoke"
+            android:textSize="24sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/login_active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:showDividers="middle"
+            android:divider="@drawable/empty_divider"
+            android:background="@color/white"
+            >
+
+            <EditText
+                android:id="@+id/login_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_search_edit_text"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:hint="@string/login_email"
+                android:textColorHint="@color/tuna"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress" />
+            <EditText
+                android:id="@+id/password_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_search_edit_text"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:hint="@string/password"
+                android:textColorHint="@color/tuna"
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:autofillHints="password"
+                android:inputType="textPassword" />
+            <android.widget.Button
+                android:id="@+id/auth_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/apply"
+                android:textSize="20sp"
+                android:background="@drawable/ic_search_button"
+                android:paddingHorizontal="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_inactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:showDividers="middle"
+            android:divider="@drawable/empty_divider"
+            android:background="@color/white"
+            >
+            <android.widget.Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/roboto"
+                android:text="@string/logout"
+                android:textSize="20sp"
+                android:background="@drawable/ic_search_button"
+                android:paddingHorizontal="10dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

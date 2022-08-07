@@ -7,10 +7,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+
 class LauncherActivity : AppCompatActivity() {
 
     private var bottomNavigationView: BottomNavigationView? = null
-    private val TAG = "LauncherActivity"
+//    private val tag = "LauncherActivity"
     private var backWasPressed: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,9 +38,9 @@ class LauncherActivity : AppCompatActivity() {
         }
     }
 
-    private fun showMainPage(){
+    private fun showMainPage() {
         val menu: Menu = bottomNavigationView!!.menu
-        val menuItem:MenuItem = menu.getItem(0)
+        val menuItem: MenuItem = menu.getItem(0)
         supportFragmentManager.beginTransaction().replace(
             R.id.fragment_container,
             CustomFragment.newInstance(menuItem)
@@ -50,10 +51,12 @@ class LauncherActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottom_navigation)
     }
 
+    @Suppress("DEPRECATION")
     private fun setListeners() {
         bottomNavigationView?.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 
+    @Suppress("DEPRECATION")
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             supportFragmentManager.beginTransaction().replace(
