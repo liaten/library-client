@@ -1,7 +1,6 @@
 package library.client.response
 
 import library.client.entity.Book
-import java.util.ArrayList
 
 interface BookResponse {
     fun returnBooks(output: ArrayList<Book?>?)
