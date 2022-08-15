@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mercury"
-    android:divider="@drawable/empty_divider"
+    android:divider="@drawable/vertical_divider_15"
     android:showDividers="middle"
 
     >

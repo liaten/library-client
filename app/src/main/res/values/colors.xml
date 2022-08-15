@@ -8,13 +8,12 @@
     <color name="white">#fff</color>
 
     <!--    dif colors-->
-    <color name="santas_gray">#101011</color>
-    <color name="woodsmoke">#0F0F10</color>
+    <color name="woodsmoke">#101011</color>
     <color name="cod_gray">#131212</color>
     <color name="tuna">#3C3C43</color>
     <color name="jumbo">#838388</color>
     <color name="gray">#808080</color>
-    <color name="date_secondary">#9B9CA6</color>
+    <color name="santas_gray">#9B9CA6</color>
     <color name="mercury">#e8e8e8</color>
     <color name="cg_blue">#247BA0</color>
     <color name="green_sheen">#70C1B3</color>

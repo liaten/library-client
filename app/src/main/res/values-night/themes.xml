@@ -1,17 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Marshakovka" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Library" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/cg_blue</item>
-        <item name="colorPrimaryVariant">@color/green_sheen</item>
-        <item name="colorOnPrimary">@color/radical_red</item>
+        <item name="colorPrimary">@color/heliotrope</item>
+        <item name="colorPrimaryVariant">@color/purple</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/turquoise_green</item>
-        <item name="colorSecondaryVariant">@color/cream</item>
-        <item name="colorOnSecondary">@color/radical_red</item>
+        <item name="colorSecondary">@color/robins_egg_blue</item>
+        <item name="colorSecondaryVariant">@color/robins_egg_blue</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="backgroundColor">@color/black</item>
     </style>
 </resources>

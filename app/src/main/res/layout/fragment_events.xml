@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/mercury"
     android:gravity="top"
-    android:divider="@drawable/empty_divider"
+    android:divider="@drawable/vertical_divider_15"
     android:showDividers="middle"
     >
     <LinearLayout
@@ -21,44 +21,9 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Календарь событий"
+            android:text="@string/events"
             android:textColor="@color/woodsmoke"
             android:textSize="25sp"
-            android:fontFamily="@font/pt_serif_bold"
-            android:gravity="bottom"
-            />
-        <TextView
-            android:id="@+id/text_view_show_calendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/calendar_shown"
-            android:textColor="@color/jumbo"
-            android:fontFamily="@font/roboto"
-            android:textSize="15sp"
-            />
-    </LinearLayout>
-
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="20dp"
-        android:background="@color/white"
-        >
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Список событий"
-            android:textColor="@color/woodsmoke"
-            android:textSize="30sp"
             android:fontFamily="@font/pt_serif_bold"
             android:gravity="bottom"
             />
@@ -86,7 +51,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            tools:ignore="RtlSymmetry" />
         <ProgressBar
             android:id="@+id/loading"
             android:layout_width="wrap_content"
@@ -102,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
-            android:text="На этот день нет событий"
+            android:text="@string/no_events_today"
             android:gravity="center_vertical"
             android:textColor="@color/jumbo"
             android:visibility="gone"
@@ -114,7 +79,5 @@
             app:layout_constraintTop_toTopOf="parent"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 </LinearLayout>

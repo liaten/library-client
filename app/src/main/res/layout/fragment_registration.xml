@@ -38,7 +38,7 @@
             android:orientation="vertical"
             android:gravity="center"
             android:showDividers="middle"
-            android:divider="@drawable/empty_divider"
+            android:divider="@drawable/vertical_divider_15"
             >
 
             <TextView
@@ -117,7 +117,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hint_cyrillic_names"
                     android:textSize="14sp"
-                    android:textColor="@color/date_secondary"
+                    android:textColor="@color/santas_gray"
                     android:fontFamily="@font/roboto"
                     />
             </LinearLayout>
@@ -179,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/hint_cyrillic_names"
                     android:textSize="14sp"
-                    android:textColor="@color/date_secondary"
+                    android:textColor="@color/santas_gray"
                     android:fontFamily="@font/roboto"
                     />
             </LinearLayout>
@@ -213,7 +213,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/phone_hint"
                     android:textSize="14sp"
-                    android:textColor="@color/date_secondary"
+                    android:textColor="@color/santas_gray"
                     android:fontFamily="@font/roboto"
                     />
             </LinearLayout>
@@ -245,7 +245,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/date_hint"
                     android:textSize="14sp"
-                    android:textColor="@color/date_secondary"
+                    android:textColor="@color/santas_gray"
                     android:fontFamily="@font/roboto"
                     />
             </LinearLayout>
@@ -278,7 +278,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/email_hint"
                     android:textSize="14sp"
-                    android:textColor="@color/date_secondary"
+                    android:textColor="@color/santas_gray"
                     android:fontFamily="@font/roboto"
                     />
             </LinearLayout>

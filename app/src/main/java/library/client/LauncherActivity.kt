@@ -3,11 +3,15 @@ package library.client
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import library.client.fragment.events.EventsFragment
 import library.client.fragment.home.HomeFragment
+import library.client.fragment.library.LibraryFragment
 import library.client.fragment.other.NoConnectionFragment
+import library.client.fragment.search.SearchFragment
 import library.client.helper.FragmentHelper
 import library.client.response.NetworkResponse
 
@@ -44,12 +48,12 @@ class LauncherActivity : AppCompatActivity(), NetworkResponse {
     }
 
     private fun showMainPage() {
-        val menu: Menu = bottomNavigationView!!.menu
-        val menuItem: MenuItem = menu.getItem(0)
-        supportFragmentManager.beginTransaction().replace(
-            R.id.fragment_container,
-            CustomFragment.newInstance(menuItem)
-        ).commit()
+        FragmentHelper(
+        this,
+        true,
+        true
+        )
+        .execute(HomeFragment())
     }
 
     private fun setViews() {
@@ -58,16 +62,32 @@ class LauncherActivity : AppCompatActivity(), NetworkResponse {
 
     @Suppress("DEPRECATION")
     private fun setListeners() {
-        bottomNavigationView?.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        bottomNavigationView?.setOnNavigationItemSelectedListener(bottomMenuChangedEvent)
     }
 
     @Suppress("DEPRECATION")
-    private val mOnNavigationItemSelectedListener =
+    private val bottomMenuChangedEvent =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
-            supportFragmentManager.beginTransaction().replace(
-                R.id.fragment_container,
-                CustomFragment.newInstance(item)
-            ).commit()
+            when (item.itemId) {
+                R.id.nav_home -> FragmentHelper(
+                    this,
+                    true,
+                    true
+                )
+                    .execute(HomeFragment())
+                R.id.nav_search -> FragmentHelper(
+                    this,
+                    true, true
+                ).execute(SearchFragment())
+                R.id.nav_library -> FragmentHelper(
+                    this,
+                    true, true
+                ).execute(LibraryFragment())
+                R.id.nav_events -> FragmentHelper(
+                    this,
+                    true, true
+                ).execute(EventsFragment())
+            }
             return@OnNavigationItemSelectedListener true
         }
 
@@ -92,10 +112,10 @@ class LauncherActivity : AppCompatActivity(), NetworkResponse {
     }
 
     private fun setBottomNavigationViewInvisible() {
-        TODO("Not yet implemented")
+        bottomNavigationView!!.visibility = View.GONE
     }
 
     private fun setBottomNavigationViewVisible() {
-        TODO("Not yet implemented")
+        bottomNavigationView!!.visibility = View.VISIBLE
     }
 }

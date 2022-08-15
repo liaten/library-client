@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Маршаковка</string>
+    <string name="app_name">Библиотека</string>
     <string name="menu_home">Главная</string>
     <string name="menu_search">Поиск</string>
     <string name="menu_library">Библиотека</string>
@@ -89,4 +89,7 @@
     <string name="no_wishlist_books">В настоящее время нет ни одной книги в списке желаемого</string>
     <string name="close_on_back_alert">Нажмите ещё раз, чтобы закрыть приложение</string>
     <string name="header">Заголовок</string>
+    <string name="calendar_of_events">Календарь событий</string>
+    <string name="list_of_events">Список событий</string>
+    <string name="no_events_today">На этот день нет событий</string>
 </resources>

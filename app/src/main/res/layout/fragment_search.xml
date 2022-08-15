@@ -8,7 +8,7 @@
     android:background="@color/mercury"
     android:gravity="top"
     android:showDividers="middle"
-    android:divider="@drawable/empty_divider"
+    android:divider="@drawable/vertical_divider_15"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:gravity="center"
         android:paddingHorizontal="20dp"
         android:showDividers="middle"
-        android:divider="@drawable/empty_divider"
+        android:divider="@drawable/vertical_divider_15"
         android:background="@color/white"
         android:paddingVertical="10dp"
 
@@ -48,7 +48,7 @@
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:hint="@string/book_name"
-            android:textColorHint="@color/tuna"
+            android:textColorHint="@color/jumbo"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck"
             android:autofillHints="book name"
@@ -61,7 +61,7 @@
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:hint="@string/author_name"
-            android:textColorHint="@color/tuna"
+            android:textColorHint="@color/jumbo"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck"
             android:autofillHints="name"
@@ -74,7 +74,7 @@
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:hint="@string/theme"
-            android:textColorHint="@color/tuna"
+            android:textColorHint="@color/jumbo"
             android:textSize="20sp"
             tools:ignore="TouchTargetSizeCheck"
             android:importantForAutofill="no"
@@ -89,6 +89,7 @@
             android:textSize="20sp"
             android:background="@drawable/ic_search_button"
             android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
             />
     </LinearLayout>
 </LinearLayout>

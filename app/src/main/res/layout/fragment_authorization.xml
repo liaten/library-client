@@ -8,7 +8,7 @@
     android:background="@color/mercury"
     android:gravity="top"
     android:showDividers="middle"
-    android:divider="@drawable/empty_divider"
+    android:divider="@drawable/vertical_divider_15"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
             android:showDividers="middle"
-            android:divider="@drawable/empty_divider"
+            android:divider="@drawable/vertical_divider_15"
             android:background="@color/white"
             >
 
@@ -118,7 +118,7 @@
             android:paddingHorizontal="20dp"
             android:paddingVertical="10dp"
             android:showDividers="middle"
-            android:divider="@drawable/empty_divider"
+            android:divider="@drawable/vertical_divider_15"
             android:background="@color/white"
             >
             <android.widget.Button
