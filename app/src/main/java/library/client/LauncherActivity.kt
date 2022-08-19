@@ -20,7 +20,7 @@ class LauncherActivity : AppCompatActivity(), NetworkResponse {
 
     var isNetworkEnabled = false
     private var bottomNavigationView: BottomNavigationView? = null
-//    private val tag = "LauncherActivity"
+    private final val TAG = "LauncherActivity"
     private var backWasPressed: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,21 +71,20 @@ class LauncherActivity : AppCompatActivity(), NetworkResponse {
             when (item.itemId) {
                 R.id.nav_home -> FragmentHelper(
                     this,
-                    true,
-                    true
+                    checkBoxBottomNavigation = true, topFragment = true
                 )
                     .execute(HomeFragment())
                 R.id.nav_search -> FragmentHelper(
                     this,
-                    true, true
+                    checkBoxBottomNavigation = true, topFragment = true
                 ).execute(SearchFragment())
                 R.id.nav_library -> FragmentHelper(
                     this,
-                    true, true
+                    checkBoxBottomNavigation = true, topFragment = true
                 ).execute(LibraryFragment())
                 R.id.nav_events -> FragmentHelper(
                     this,
-                    true, true
+                    checkBoxBottomNavigation = true, topFragment = true
                 ).execute(EventsFragment())
             }
             return@OnNavigationItemSelectedListener true
@@ -99,14 +98,18 @@ class LauncherActivity : AppCompatActivity(), NetworkResponse {
         if (status!!) {
             if (!isNetworkEnabled) {
                 isNetworkEnabled = true
-                FragmentHelper(this, true, true)
+                FragmentHelper(this,
+                    checkBoxBottomNavigation = true,
+                    topFragment = true)
                     .execute(HomeFragment())
                 setBottomNavigationViewVisible()
             }
         } else {
             isNetworkEnabled = false
             setBottomNavigationViewInvisible()
-            FragmentHelper(this, true, false)
+            FragmentHelper(this,
+                checkBoxBottomNavigation = true,
+                topFragment = false)
                 .execute(NoConnectionFragment())
         }
     }
